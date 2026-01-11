@@ -71,6 +71,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<?php include "head.php"; ?>
+<link rel="icon" type="image/png" href="/bookmarker/bookmarkerlogo-Photoroom.png">
 <title>로그인 | Bookmark</title>
 
 <style>

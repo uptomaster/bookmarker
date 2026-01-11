@@ -10,7 +10,10 @@ if (isset($_SESSION["user_id"])) {
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <?php include "head.php"; ?>
     <meta charset="UTF-8">
+    <?php include "head.php"; ?>
+    <link rel="icon" type="image/png" href="/bookmarker/bookmarkerlogo-Photoroom.png">
     <title>Bookmark | 나만의 북마크 서비스</title>
 
     <style>
@@ -130,7 +133,6 @@ if (isset($_SESSION["user_id"])) {
 </head>
 <body>
 <link rel="stylesheet" href="style.css">
-
 <?php include "header.php"; ?>
 
 <section class="hero">

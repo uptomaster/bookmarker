@@ -71,6 +71,8 @@ $bookmarks = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<?php include "head.php"; ?>
+<link rel="icon" type="image/png" href="/bookmarker/bookmarkerlogo-Photoroom.png">
 <title>마이페이지 | Bookmark</title>
 
 <style>
