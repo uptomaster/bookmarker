@@ -238,6 +238,78 @@ li {
         gap: 10px;
     }
 }
+
+/* LOGO AREA */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-video {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 800;
+  color: #4f46e5;
+}
+
+/* =========================
+   마이페이지 HERO
+========================= */
+.mypage-hero {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 36px;
+    padding: 20px;
+    border-radius: 16px;
+    background: #f3f4ff;
+}
+
+.mypage-video {
+    width: 96px;
+    height: 96px;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.mypage-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.mypage-hero-text h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.mypage-hero-text p {
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: var(--subtext);
+}
+
+/* 모바일 대응 */
+@media (max-width: 600px) {
+    .mypage-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
 </style>
 </head>
 <body>
@@ -245,6 +317,26 @@ li {
 <?php include "header.php"; ?>
 
 <div class="container">
+
+<div class="mypage-hero">
+    <div class="mypage-video">
+        <video
+            src="/bookmarker/video/logo.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+        ></video>
+    </div>
+
+    <div class="mypage-hero-text">
+        <h2>나의 북마크 공간</h2>
+        <p>
+            자주 쓰는 링크를 모아두는 나만의 기록 공간입니다.
+        </p>
+    </div>
+</div>
+
 
 <h2>마이페이지</h2>
 <p class="user">

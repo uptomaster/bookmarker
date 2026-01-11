@@ -179,6 +179,29 @@ button:hover {
 .links a:hover {
     text-decoration: underline;
 }
+
+/* LOGO AREA */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-video {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 800;
+  color: #4f46e5;
+}
+
+
 </style>
 </head>
 <body>

@@ -12,7 +12,7 @@ if (isset($_SESSION["user_id"])) {
 <head>
     <?php include "head.php"; ?>
     <meta charset="UTF-8">
-    <?php include "head.php"; ?>
+    
     <link rel="icon" type="image/png" href="/bookmarker/bookmarkerlogo-Photoroom.png">
     <title>Bookmark | 나만의 북마크 서비스</title>
 
@@ -27,9 +27,7 @@ if (isset($_SESSION["user_id"])) {
         --border: #e5e7eb;
     }
 
-    * {
-        box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
         margin: 0;
@@ -50,37 +48,56 @@ if (isset($_SESSION["user_id"])) {
 
     .hero-card {
         background: var(--card);
-        padding: 48px 40px;
-        border-radius: 18px;
-        max-width: 520px;
+        padding: 56px 40px;
+        border-radius: 22px;
+        max-width: 560px;
         width: 100%;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+        box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+    }
+
+    /* 🎥 캐릭터 영상 */
+    .hero-video {
+        width: 220px;
+        height: 220px;
+        margin: 0 auto 28px;
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .hero-video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .hero-card h1 {
-        margin-top: 0;
-        font-size: 28px;
+        margin: 0;
+        font-size: 30px;
+        font-weight: 800;
     }
 
     .hero-card p {
         color: var(--subtext);
-        margin: 18px 0 32px;
+        margin: 18px 0 36px;
         line-height: 1.6;
+        font-size: 15px;
     }
 
     .actions {
         display: flex;
-        gap: 12px;
+        gap: 14px;
         justify-content: center;
     }
 
     .actions a {
         flex: 1;
         padding: 14px 0;
-        border-radius: 12px;
+        border-radius: 14px;
         text-decoration: none;
         font-weight: 600;
         font-size: 15px;
+        transition: 0.2s;
     }
 
     .login-btn {
@@ -90,6 +107,7 @@ if (isset($_SESSION["user_id"])) {
 
     .login-btn:hover {
         background: var(--primary-dark);
+        transform: translateY(-1px);
     }
 
     .register-btn {
@@ -100,35 +118,23 @@ if (isset($_SESSION["user_id"])) {
 
     .register-btn:hover {
         background: #f3f4f6;
+        transform: translateY(-1px);
     }
 
     @media (max-width: 500px) {
         .hero-card {
-            padding: 36px 28px;
+            padding: 40px 28px;
+        }
+
+        .hero-video {
+            width: 180px;
+            height: 180px;
         }
 
         .actions {
             flex-direction: column;
         }
     }
-
-    .header {
-    min-height: 72px;
-    background: #fff;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-    height: 72px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
     </style>
 </head>
 <body>
@@ -137,7 +143,19 @@ if (isset($_SESSION["user_id"])) {
 
 <section class="hero">
     <div class="hero-card">
-        <h1>🔖 Bookmark</h1>
+
+        <!-- 🎥 메인 캐릭터 영상 -->
+        <div class="hero-video">
+            <video
+                src="/bookmarker/video/logo.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+            ></video>
+        </div>
+
+        <h1>Bookmark</h1>
         <p>
             흩어져 있는 링크를 한 곳에.<br>
             로그인하고 나만의 북마크를 안전하게 관리하세요.

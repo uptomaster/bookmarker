@@ -1,1 +1,181 @@
-<h1>HELLO DOTHOME</h1>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookmarker</title>
+
+  <!-- 기본 스타일 -->
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --primary: #4f46e5;
+      --text: #1f2937;
+      --subtext: #6b7280;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* 영상 로고 */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo video {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .logo span {
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--primary);
+    }
+
+    /* =========================
+       MAIN
+    ========================= */
+    main {
+      min-height: calc(100vh - 72px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 48px 42px;
+      border-radius: 18px;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .card h1 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    .card p {
+      margin: 18px 0 32px;
+      color: var(--subtext);
+      line-height: 1.6;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .actions a {
+      flex: 1;
+      padding: 14px 0;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: #fff;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .btn-outline:hover {
+      background: #f3f4f6;
+    }
+
+    @media (max-width: 480px) {
+      .actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <!-- 🔥 영상 로고 -->
+        <video
+          src="/video/logo.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+        ></video>
+        <span>Bookmarker</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="card">
+      <h1>나만의 북마크 공간</h1>
+      <p>
+        흩어져 있는 링크를 한 곳에 정리하고<br>
+        언제 어디서든 안전하게 다시 꺼내보세요.
+      </p>
+
+      <div class="actions">
+        <a href="login.php" class="btn-primary">로그인</a>
+        <a href="register.php" class="btn-outline">회원가입</a>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
