@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$dbname = "bookmark_db";
-$user = "root";
-$pass = ""; // XAMPP 기본은 비밀번호 없음
+$dbname = "bookmarker929";
+$user = "bookmarker929";
+$pass = "skagur929!";
 
 try {
     $pdo = new PDO(
@@ -12,5 +12,5 @@ try {
     );
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    die("DB 연결 실패: " . $e->getMessage());
+    die("DB 연결 실패");
 }

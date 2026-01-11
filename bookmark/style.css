@@ -1,0 +1,47 @@
+/* HEADER */
+.header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4f46e5;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-email {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.nav a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #1f2937;
+}
+
+.logout-btn {
+    color: #ef4444;
+    font-weight: 500;
+}

@@ -108,9 +108,28 @@ if (isset($_SESSION["user_id"])) {
             flex-direction: column;
         }
     }
+
+    .header {
+    min-height: 72px;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
     </style>
 </head>
 <body>
+<link rel="stylesheet" href="style.css">
 
 <?php include "header.php"; ?>
 
