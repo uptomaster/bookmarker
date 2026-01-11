@@ -3,6 +3,7 @@
 
 <!-- Favicon -->
 <link rel="icon" href="/bookmarker/bookmarkerlogo-Photoroom.png">
+<script src="/bookmarker/js/theme.js" defer></script>
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">

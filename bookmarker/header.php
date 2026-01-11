@@ -18,5 +18,9 @@ if (session_status() === PHP_SESSION_NONE) {
                 <a href="logout.php" class="logout-btn">로그아웃</a>
             </nav>
         <?php endif; ?>
+        <button id="themeToggle" class="theme-btn">
+        🌙
+        </button>
+
     </div>
 </header>
